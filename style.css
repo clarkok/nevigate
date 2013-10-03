@@ -12,9 +12,10 @@ html, body, #main{
 	position:	absolute;
 	top:		0;
 	left:		0;
+	height:		90%;
 }
 
-canvas {
+video {
 	height:		100%;
 	width:		100%;
 }
@@ -30,8 +31,6 @@ canvas {
 	position:	absolute;
 	height:		100%;
 	width:		150px;
-	background:	white;
-	opacity:	0.50;
 }
 
 @keyframes	linkblock_ani{
@@ -132,6 +131,7 @@ a,	a:visited	{
 	border-radius:		25px;
 	-moz-border-radius:	25px;
 	text-align:		center;
+	background:		white;
 }
 
 .mitem-seleted {

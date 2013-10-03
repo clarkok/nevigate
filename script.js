@@ -5,7 +5,7 @@ function	init(str){
 	var	links	= show.getElementsByClassName("linkblock");
 	for (var i=0; i<links.length; i++){
 		links[i].style.left	= ''+Math.random()*90+'%';
-		links[i].style.top	= ''+(i*((window.innerHeight - 20) / links.length)+20)+'px';
+		links[i].style.top	= ''+i*(100/links.length)+'%';
 	}
 };
 
@@ -18,6 +18,39 @@ function	show(str){
 	this.className	= "mitem-seleted";
 };
 
+/*
+class	box{
+	var	x;
+	var	y;
+	var	r;
+	var	a;
+	var	w;
+};
+*/
+
+var	arcs	= new Array;
+var	last,	now;
+
+function	control(){
+	
+}
+
+function	sector_ring(cnt, x, y, r1, r2, a, d, fill){
+	cnt.fillStyle	= fill ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)";
+	cnt.beginPath();
+	cnt.arc(x, y, r2, a, a+d, true);
+	cnt.lineTo(x+r1*Math.cos(a+d), y+r1*Math.sin(a+d));
+	cnt.arc(x, y, r1, a+d, a, false);
+	cnt.lineTo(x+r2*Math.cos(a), y+r2*Math.sin(a));
+
+	cnt.fill();
+}
+
+function	draw(cnt){
+	cnt.clearRect(0, 0, window.innerWidth, window.innerHeight);
+	for (var i=0; i<arcs.length; i++){
+	}
+}
 
 function	setCanvas(){
 	var	cvs	= document.getElementById("bg-canvas"),
@@ -25,4 +58,5 @@ function	setCanvas(){
 	cvs.width	= window.innerWidth;
 	cvs.height	= window.innerHeight;
 
+	draw(cnt);
 }
