@@ -4,7 +4,8 @@ function	init(str){
 	var	show	= document.getElementById(str);
 	var	links	= show.getElementsByClassName("linkblock");
 	for (var i=0; i<links.length; i++){
-		links[i].style.left	= ''+Math.random()*90+'%';
+		//links[i].style.left	= ''+Math.random()*90+'%';
+		links[i].style.left	= ''+i*(90/links.length)+'%';
 		links[i].style.top	= ''+i*(100/links.length)+'%';
 	}
 };
@@ -17,16 +18,6 @@ function	show(str){
 	document.getElementById(current).className	= "show";
 	this.className	= "mitem-seleted";
 };
-
-/*
-class	box{
-	var	x;
-	var	y;
-	var	r;
-	var	a;
-	var	w;
-};
-*/
 
 var	arcs	= new Array;
 var	last,	now;
