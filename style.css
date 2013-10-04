@@ -25,6 +25,7 @@ video {
 	height:		100%;
 	width:		70%;
 	left:		150px;
+	display:	inline;
 }
 
 #menu {
@@ -81,6 +82,10 @@ video {
 	-webkit-animation-fill-mode:		forwards;
 }
 
+.hide {
+	display:	none;
+}
+
 .hide > .linkblock {
 	width:			20em;
 	height:			1em;
@@ -132,6 +137,17 @@ a,	a:visited	{
 	-moz-border-radius:	25px;
 	text-align:		center;
 	background:		white;
+
+	transition:		all	0.5s;
+	-moz-transition:	all	0.5s;
+	-webkit-transition:	all	0.5s;
+	-o-transition:		all	0.5s;
+}
+
+.mitem:hover {
+	background:	black;
+	text-color:	white;
+	color:		white;
 }
 
 .mitem-seleted {
