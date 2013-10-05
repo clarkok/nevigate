@@ -13,6 +13,10 @@ function	init(str){
 function	show(str){
 	if (str == current)	return;
 	if (current != "(none)")	document.getElementById(current).className	= "hide";
+    //1秒后消失，使其display为none
+    setTimeout(function() {
+        document.getElementById(current).style.display = "none";
+    }, 1000);
 	current	= str;
 	init(current);
 	document.getElementById(current).className	= "show";
